@@ -20,7 +20,7 @@ This repository serves as a collection of code snippets and projects that demons
 To get started, clone the repository and install the necessary dependencies:
 
 ```bash
-git clone https://github.com/yourusername/NodeWithMySQL.git
+git clone https://github.com/ankurbansal15/NodeWithMySQL.git
 cd NodeWithMySQL
 npm install
 ```
