@@ -9,21 +9,29 @@ const connection = await mysql.createConnection({
   password: 'password'
 });
 
-try {
-    const results = await connection.query('SHOW TABLES');
+let getRandomUser = () =>{
+  return [
+    faker.string.uuid(),
+    faker.internet.username(),
+    faker.internet.email(),
+    faker.internet.password(),
+  ]
+};
+
+let users = [];
+for(let i = 0;i<100;i++){
+  users[i] = getRandomUser();
+}
+
+let q = "INSERT INTO user (id, username, email, password) VALUES ?";
+
+  try {
+    const results = await connection.query(q,[users]);
     console.log(results);
   } catch (error) {
     console.log(error);
   }
 connection.end();
 
-let getRandomUser = () =>{
-    return {
-      userId: faker.string.uuid(),
-      username: faker.internet.username(),
-      email: faker.internet.email(),
-      password: faker.internet.password(),
-    };
-  }
-console.log(getRandomUser());
+
   
