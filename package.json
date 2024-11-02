@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "faker": "^6.6.6"
+  },
+  "name": "nodewithsql",
+  "version": "1.0.0",
+  "description": "This project contains all the code examples and exercises I completed while learning how to integrate Node.js with MySQL.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
